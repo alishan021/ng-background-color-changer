@@ -1,5 +1,10 @@
 # BackgroundColorChanger
 
+This project is an easy project. There AppComponent, ColorBoardComponent, ColorpieceComponent. Color board will be provide multiple colors. When we click the the color the background will change to that color. All the color pieces are reusable ColorpieceComponents.
+
+![image](https://github.com/user-attachments/assets/c4c4b3a6-8b65-4dcd-997b-5c109388e23f)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
 
 ## Development server
