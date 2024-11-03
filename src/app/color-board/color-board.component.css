@@ -3,9 +3,12 @@
     padding: 20px;
     background-color: bisque;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: fit-content;
+    width: 100%;
+    max-width: 100vw;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 
