@@ -18,3 +18,7 @@
     display: flex;
     justify-content: center;
 }
+
+.heading-h2 {
+    padding: 20px;
+}
