@@ -1,0 +1,17 @@
+
+.div-color-board {
+    padding: 20px;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+
+
+
+.justify-color-container {
+    display: flex;
+    justify-content: center;
+}
