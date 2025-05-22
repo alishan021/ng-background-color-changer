@@ -1,5 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  --background-color: #FFFFFF;
+  --text-color: #333333;
+  --primary-color: #007bff;
+  --header-bg: #f8f9fa;
+  --card-bg: #fff;
+  --card-border: #dee2e6;
+}
+
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #bb86fc;
+  --header-bg: #1e1e1e;
+  --card-bg: #2c2c2c;
+  --card-border: #444444;
+}
 
 * {
     padding: 0;

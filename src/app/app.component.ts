@@ -13,13 +13,39 @@ import { ColorsService } from './service/colors.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements DoCheck {
-
-  backgroundColor = signal<string>('#fff');
+  isDarkMode = signal(false);
+  backgroundColor = signal<string>(this.isDarkMode() ? '#121212' : '#FFFFFF');
 
   colorsService = inject(ColorsService);
 
+  constructor() {
+    // Optional: Set initial theme based on system preference or saved choice
+    // This example defaults to light theme as per isDarkMode signal initial value
+    this.updateBodyClass();
+  }
+
+  toggleTheme(): void {
+    this.isDarkMode.set(!this.isDarkMode());
+    this.updateBodyClass();
+    this.backgroundColor.set(this.isDarkMode() ? '#121212' : '#FFFFFF');
+  }
+
+  private updateBodyClass(): void {
+    if (this.isDarkMode()) {
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-theme');
+    }
+  }
+
   ngDoCheck(): void {
-    this.backgroundColor.set(this.colorsService.getCurrentColor());
+    // The main background color is now theme-dependent.
+    // If colorsService.getCurrentColor() was meant for specific components
+    // or a dynamic part of the theme, that logic would need to be integrated here
+    // or in the respective components. For now, the direct set from service is removed
+    // in favor of theme-based background.
+    // If you still need colorsService for other purposes, it's available.
+    // Example: console.log('Current color from service:', this.colorsService.getCurrentColor());
   }
 
 }
